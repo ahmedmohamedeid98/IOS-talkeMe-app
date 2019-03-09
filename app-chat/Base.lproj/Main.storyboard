@@ -89,19 +89,73 @@
         <scene sceneID="dKe-xa-3S3">
             <objects>
                 <viewController id="nuD-zs-JPQ" customClass="ChannelVC" customModule="app_chat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7C6-wX-xXN">
+                    <view key="view" contentMode="scaleToFill" id="7C6-wX-xXN" customClass="GDGradiant" customModule="app_chat" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibr-Dp-NCZ">
+                                <rect key="frame" x="16" y="44" width="59" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgl-jX-tVE">
+                                <rect key="frame" x="16" y="89.5" width="77" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6P-75-gd8">
+                                <rect key="frame" x="273" y="88.5" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-Zp-oRM">
+                                <rect key="frame" x="126" y="586" width="47" height="32"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-6U-84y">
+                                <rect key="frame" x="16" y="557" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="KXp-XT-DfF"/>
+                                    <constraint firstAttribute="width" constant="90" id="MRE-Me-Y2H"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tkf-vN-VMW">
+                                <rect key="frame" x="0.0" y="130.5" width="375" height="406.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Apl-Zp-oRM" firstAttribute="centerY" secondItem="zTE-6U-84y" secondAttribute="centerY" id="1Z4-qI-eU3"/>
+                            <constraint firstItem="Ibr-Dp-NCZ" firstAttribute="top" secondItem="jJM-ah-Ggn" secondAttribute="top" constant="24" id="2Vr-yz-0Yl"/>
+                            <constraint firstItem="S6P-75-gd8" firstAttribute="centerY" secondItem="Cgl-jX-tVE" secondAttribute="centerY" id="6sn-Qv-ixP"/>
+                            <constraint firstItem="Cgl-jX-tVE" firstAttribute="top" secondItem="Ibr-Dp-NCZ" secondAttribute="bottom" constant="20" id="7TS-r9-s9t"/>
+                            <constraint firstItem="Cgl-jX-tVE" firstAttribute="leading" secondItem="Ibr-Dp-NCZ" secondAttribute="leading" id="LfW-ih-EnE"/>
+                            <constraint firstItem="jJM-ah-Ggn" firstAttribute="trailing" secondItem="S6P-75-gd8" secondAttribute="trailing" constant="80" id="OP9-HJ-IPu"/>
+                            <constraint firstItem="Tkf-vN-VMW" firstAttribute="leading" secondItem="jJM-ah-Ggn" secondAttribute="leading" id="SYx-FM-30Q"/>
+                            <constraint firstItem="zTE-6U-84y" firstAttribute="top" secondItem="Tkf-vN-VMW" secondAttribute="bottom" constant="20" id="Wfb-WI-muG"/>
+                            <constraint firstItem="jJM-ah-Ggn" firstAttribute="bottom" secondItem="zTE-6U-84y" secondAttribute="bottom" constant="20" id="dVF-zC-ULg"/>
+                            <constraint firstItem="Tkf-vN-VMW" firstAttribute="trailing" secondItem="jJM-ah-Ggn" secondAttribute="trailing" id="ddQ-37-uaX"/>
+                            <constraint firstItem="Tkf-vN-VMW" firstAttribute="top" secondItem="S6P-75-gd8" secondAttribute="bottom" constant="20" id="doI-wH-FK4"/>
+                            <constraint firstItem="zTE-6U-84y" firstAttribute="leading" secondItem="jJM-ah-Ggn" secondAttribute="leading" constant="16" id="g1l-fg-Xsf"/>
+                            <constraint firstItem="Apl-Zp-oRM" firstAttribute="leading" secondItem="zTE-6U-84y" secondAttribute="trailing" constant="20" id="i2R-Lw-p8J"/>
+                            <constraint firstItem="Ibr-Dp-NCZ" firstAttribute="leading" secondItem="jJM-ah-Ggn" secondAttribute="leading" constant="16" id="yHw-Mf-Id0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jJM-ah-Ggn"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuY-Py-7Hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="-171"/>
+            <point key="canvasLocation" x="589.60000000000002" y="-171.36431784107947"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="profileDefault" width="192" height="192"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
