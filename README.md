@@ -1,2 +1,2 @@
 # app-chat
-this is my chat app
+this is chat app it is very similar for slack app (recording...)
